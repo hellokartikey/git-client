@@ -16,8 +16,16 @@ Kirigami.ApplicationWindow {
 
     pageStack.initialPage: Kirigami.Page {
         id: page
-        actions.contextualActions: [
-            ApplicationMenu {}
-        ]
+        actions {
+            
+            contextualActions: [
+                Stash {},
+                StashPop {},
+                Kirigami.Separator {},
+                Fetch {},
+                Push {},
+                ApplicationMenu {}
+            ]
+        }
     }
 }

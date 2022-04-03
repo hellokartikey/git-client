@@ -42,7 +42,7 @@ Kirigami.Action {
 
     Kirigami.Action {
         text: "Quit"
-        icon.name: "window-close"
+        icon.name: "application-exit"
         onTriggered: Qt.quit()
     }
 }
