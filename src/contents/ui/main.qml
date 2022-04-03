@@ -17,11 +17,11 @@ Kirigami.ApplicationWindow {
     pageStack.initialPage: Kirigami.Page {
         id: page
         actions {
-            
             contextualActions: [
+                History {},
                 Stash {},
                 StashPop {},
-                Kirigami.Separator {},
+                Branch {},
                 Fetch {},
                 Push {},
                 ApplicationMenu {}
