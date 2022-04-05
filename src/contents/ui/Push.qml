@@ -5,7 +5,7 @@ import org.kde.kirigami 2.15 as Kirigami
 
 Kirigami.Action {
     text: "Push"
-    icon.name: "cloud-upload"
+    icon.name: "vcs-push"
 
     Kirigami.Action {
         text: "Origin"
