@@ -4,11 +4,11 @@ import QtQuick.Layouts 1.10
 import org.kde.kirigami 2.15 as Kirigami
 
 Kirigami.Action {
-    text: "Pull"
     icon.name: "vcs-pull"
+    tooltip: "Pull"
 
     Kirigami.Action {
-        text: "Origin"
+        text: "origin"
     }
 
     Kirigami.Action {

@@ -5,6 +5,7 @@ import org.kde.kirigami 2.15 as Kirigami
 
 Kirigami.Action {
     icon.name: "application-menu"
+    tooltip: "Open Menu"
 
     Kirigami.Action {
         text: "New Repository"
@@ -28,11 +29,9 @@ Kirigami.Action {
 
     Kirigami.Action {
         text: "Open Recent"
-        Repeater {
-            model: ListModel
-            delegate: Kirigami.Action {
-                text: model.text
-            }
+        
+        Kirigami.Action {
+            text: "git-client"
         }
     }
 
@@ -43,6 +42,7 @@ Kirigami.Action {
     Kirigami.Action {
         text: "Quit"
         icon.name: "application-exit"
+        shortcut: StandardKey.Quit
         onTriggered: Qt.quit()
     }
 }

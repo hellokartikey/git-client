@@ -5,18 +5,36 @@ import org.kde.kirigami 2.15 as Kirigami
 
 Kirigami.Action {
     text: "Branch Name"
-    icon.name: "vcs-branch"
-    
+    icon.name: "vcs-merge"
+
     Kirigami.Action {
         text: "origin/main"
     }
 
     Kirigami.Action {
-        text: "origin/main2"
+        text: "origin/development"
     }
     
     Kirigami.Action {
-        text: "origin/main3"
+        text: "origin/my_feature"
     }
 
+    Kirigami.Action {
+        separator: true
+    }
+
+    Kirigami.Action {
+        text: "New Branch"
+        icon.name: "vcs-branch"
+    }
+
+    Kirigami.Action {
+        text: "Merge Branch"
+        icon.name: "vcs-merge-request"
+    }
+
+    Kirigami.Action {
+        text: "Delete Branch"
+        icon.name: "vcs-branch-delete"
+    }
 }

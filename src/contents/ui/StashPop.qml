@@ -4,6 +4,6 @@ import QtQuick.Layouts 1.10
 import org.kde.kirigami 2.15 as Kirigami
 
 Kirigami.Action {
-    text: "Pop Stash"
     icon.name: "vcs-stash-pop"
+    tooltip: "Pop Stash"
 }
