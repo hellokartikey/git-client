@@ -1,12 +1,14 @@
  <RCC>
     <qresource prefix="/">
         <file alias="main.qml">contents/ui/main.qml</file>
-        <file>contents/ui/header/ApplicationMenu.qml</file>
-        <file>contents/ui/header/Branch.qml</file>
-        <file>contents/ui/header/Fetch.qml</file>
-        <file>contents/ui/header/History.qml</file>
-        <file>contents/ui/header/Push.qml</file>
-        <file>contents/ui/header/Stash.qml</file>
-        <file>contents/ui/header/StashPop.qml</file>
+    </qresource>
+    <qresource prefix="/header">
+        <file alias="ApplicationMenu.qml">contents/ui/header/ApplicationMenu.qml</file>
+        <file alias="Branch.qml">contents/ui/header/Branch.qml</file>
+        <file alias="Fetch.qml">contents/ui/header/Fetch.qml</file>
+        <file alias="History.qml">contents/ui/header/History.qml</file>
+        <file alias="Push.qml">contents/ui/header/Push.qml</file>
+        <file alias="Stash.qml">contents/ui/header/Stash.qml</file>
+        <file alias="StashPop.qml">contents/ui/header/StashPop.qml</file>
     </qresource>
 </RCC>
