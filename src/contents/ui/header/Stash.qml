@@ -8,4 +8,6 @@ Kirigami.Action {
 
     icon.name: "vcs-stash"
     tooltip: "Stash"
+
+    onTriggered: stashPopButton.visible = true
 }

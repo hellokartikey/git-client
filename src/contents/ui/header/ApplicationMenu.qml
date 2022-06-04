@@ -31,7 +31,7 @@ Kirigami.Action {
 
     Kirigami.Action {
         text: "Open Recent"
-        
+
         Kirigami.Action {
             text: "git-client"
         }

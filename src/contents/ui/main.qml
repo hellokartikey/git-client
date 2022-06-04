@@ -9,50 +9,50 @@ import "header" as Header
 Kirigami.ApplicationWindow {
     id: root
 
-    minimumWidth: Kirigami.Units.gridUnit * 60
-    minimumHeight: Kirigami.Units.gridUnit * 30
+    minimumWidth: Kirigami.Units.gridUnit * 20
+    minimumHeight: Kirigami.Units.gridUnit * 20
 
-    width: Kirigami.Units.gridUnit * 60
-    height: Kirigami.Units.gridUnit * 30
+    width: Kirigami.Units.gridUnit * 50
+    height: Kirigami.Units.gridUnit * 25
 
     title: "GIT Client"
 
-    // pageStack.initialPage: sidePage
-    pageStack.initialPage: sidePage
+    globalDrawer: Kirigami.GlobalDrawer {
+        id: globalDrawer
+        width: Kirigami.Units.gridUnit * 20
 
-    Component {
+        header: Controls.ToolBar {
+            contentItem: Kirigami.ActionToolBar {
+                alignment: Qt.AlignRight
+                actions: [
+                    Header.History {},
+                    Header.ApplicationMenu {}
+                ]
+            }
+        }
+
+        collapsible: false
+        modal: false
+        collapsed: false
+    }
+
+    pageStack.initialPage: Kirigami.Page {
         id: mainPage
 
-        Kirigami.Page {
-            id: mainPage
+        title: "git-client"
+        globalToolBarStyle: ApplicationHeaderStyle.None
 
-            actions.contextualActions: [
-                Header.Stash {},
-                Header.StashPop {},
-                Header.Branch {},
-                Header.Fetch {},
-                Header.Push {}
-            ]
+        header: Controls.ToolBar {
+            contentItem: Kirigami.ActionToolBar {
+                alignment: Qt.AlignRight
+                actions: [
+                    Header.Stash {},
+                    Header.StashPop { id: stashPopButton },
+                    Header.Branch {},
+                    Header.Fetch {},
+                    Header.Push {}
+                ]
+            }
         }
-    }
-
-    Component {
-        id: sidePage
-
-        Kirigami.Page {
-            id: sideBar
-            title: "git-client"
-
-            width: Kirigami.Units.gridUnit * 5
-
-            actions.contextualActions: [
-                Header.History {},
-                Header.ApplicationMenu {}
-            ]
-        }
-    }
-
-    Component.onCompleted: {
-        pageStack.push(mainPage)
     }
 }
