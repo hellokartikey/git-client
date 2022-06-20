@@ -9,8 +9,8 @@ import "header" as Header
 Kirigami.ApplicationWindow {
     id: root
 
-    minimumWidth: Kirigami.Units.gridUnit * 20
-    minimumHeight: Kirigami.Units.gridUnit * 20
+    minimumWidth: Kirigami.Units.gridUnit * 30
+    minimumHeight: Kirigami.Units.gridUnit * 15
 
     width: Kirigami.Units.gridUnit * 50
     height: Kirigami.Units.gridUnit * 25
@@ -40,7 +40,7 @@ Kirigami.ApplicationWindow {
         id: mainPage
 
         title: "git-client"
-        globalToolBarStyle: ApplicationHeaderStyle.None
+        globalToolBarStyle: Kirigami.ApplicationHeaderStyle.None
 
         header: Controls.ToolBar {
             contentItem: Kirigami.ActionToolBar {
