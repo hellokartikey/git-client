@@ -4,7 +4,7 @@ import QtQuick.Layouts 1.15
 import org.kde.kirigami 2.15 as Kirigami
 import Qt.labs.platform 1.1 as Labs
 
-import "header" as Header
+import "actions" as Actions
 
 Kirigami.ApplicationWindow {
     id: root

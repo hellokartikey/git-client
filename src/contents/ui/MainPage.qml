@@ -4,7 +4,7 @@ import QtQuick.Layouts 1.15
 import org.kde.kirigami 2.15 as Kirigami
 import Qt.labs.platform 1.1 as Labs
 
-import "header" as Header
+import "actions" as Actions
 
 Kirigami.Page {
     id: mainPage
@@ -13,10 +13,11 @@ Kirigami.Page {
     title: "git-client"
 
     actions.contextualActions: [
-        Header.Stash {},
-        Header.StashPop { id: stashPopButton },
-        Header.Branch {},
-        Header.Fetch {},
-        Header.Push {}
+
+        Actions.Branch {},
+        Actions.Commit {},
+
+        ApplicationMenu {}
+
     ]
 }

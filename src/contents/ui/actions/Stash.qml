@@ -4,9 +4,12 @@ import QtQuick.Layouts 1.10
 import org.kde.kirigami 2.15 as Kirigami
 
 Kirigami.Action {
-    id: historyButton
 
-    text: "History"
-    checkable: true
-    icon.name: "shallow-history"
+    id: stashButton
+
+    icon.name: "vcs-stash"
+    tooltip: "Stash"
+
+    onTriggered: stashPopButton.visible = true
+
 }

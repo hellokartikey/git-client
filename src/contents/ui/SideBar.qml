@@ -4,7 +4,7 @@ import QtQuick.Layouts 1.15
 import org.kde.kirigami 2.15 as Kirigami
 import Qt.labs.platform 1.1 as Labs
 
-import "header" as Header
+import "actions" as Actions
 
 Kirigami.GlobalDrawer {
 
@@ -21,13 +21,11 @@ Kirigami.GlobalDrawer {
         contentItem: Kirigami.ActionToolBar {
             alignment: Qt.AlignRight
             actions: [
-                Header.History {},
-                Header.ApplicationMenu {}
+                Actions.Stash {},
+                Actions.StashPop { id: stashPopButton },
+                Actions.History {},
+                ApplicationMenu {}
             ]
         }
-    }
-
-    Kirigami.Action {
-        text: "Button"
     }
 }

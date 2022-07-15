@@ -4,11 +4,13 @@ import QtQuick.Layouts 1.10
 import org.kde.kirigami 2.15 as Kirigami
 
 Kirigami.Action {
+
     id: branchMenu
 
     text: "Branch Name"
     icon.name: "vcs-merge"
 
+    // Should list branches dynamically
     Kirigami.Action {
         text: "origin/main"
     }
@@ -16,7 +18,7 @@ Kirigami.Action {
     Kirigami.Action {
         text: "origin/development"
     }
-    
+
     Kirigami.Action {
         text: "origin/my_feature"
     }
@@ -39,4 +41,5 @@ Kirigami.Action {
         text: "Delete Branch"
         icon.name: "vcs-branch-delete"
     }
+
 }

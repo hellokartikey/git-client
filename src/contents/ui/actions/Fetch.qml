@@ -4,8 +4,10 @@ import QtQuick.Layouts 1.10
 import org.kde.kirigami 2.15 as Kirigami
 
 Kirigami.Action {
+
     id: fetchButton
 
+    text: "Pull"
     icon.name: "vcs-pull"
     tooltip: "Pull"
 
