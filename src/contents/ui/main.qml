@@ -17,42 +17,7 @@ Kirigami.ApplicationWindow {
 
     title: "GIT Client"
 
-    globalDrawer: Kirigami.GlobalDrawer {
-        id: globalDrawer
-        width: Kirigami.Units.gridUnit * 20
+    globalDrawer: SideBar {}
 
-        header: Controls.ToolBar {
-            contentItem: Kirigami.ActionToolBar {
-                alignment: Qt.AlignRight
-                actions: [
-                    Header.History {},
-                    Header.ApplicationMenu {}
-                ]
-            }
-        }
-
-        collapsible: false
-        modal: false
-        collapsed: false
-    }
-
-    pageStack.initialPage: Kirigami.Page {
-        id: mainPage
-
-        title: "git-client"
-        globalToolBarStyle: Kirigami.ApplicationHeaderStyle.None
-
-        header: Controls.ToolBar {
-            contentItem: Kirigami.ActionToolBar {
-                alignment: Qt.AlignRight
-                actions: [
-                    Header.Stash {},
-                    Header.StashPop { id: stashPopButton },
-                    Header.Branch {},
-                    Header.Fetch {},
-                    Header.Push {}
-                ]
-            }
-        }
-    }
+    pageStack.initialPage: MainPage {}
 }
